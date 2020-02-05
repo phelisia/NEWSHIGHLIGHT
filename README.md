@@ -12,11 +12,11 @@ Python
 # Development server
 Run python3 run.py
 
-Live links
+# Live links
 https://phelisia.github.io/Quotes/
 
-License
-Licensed under the MIT license. copyright (c) 2020 Quotes
+# License
+Licensed under the MIT license. copyright (c) 2020 NewsHighlights
 
 Contacts
 Email:phelisiajeruto@gmail.com Cell:0718117097
