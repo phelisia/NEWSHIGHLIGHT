@@ -21,4 +21,5 @@ Licensed under the MIT license. copyright (c) 2020 NewsHighlights
 # Contacts
 Email:phelisiajeruto@gmail.com Cell:0718117097
 
-Codebeat
+# Codebeat
+[![codebeat badge](https://codebeat.co/badges/87fca460-a917-4dfc-981c-0de0e1045210)](https://codebeat.co/projects/github-com-phelisia-newshighlight-master)
