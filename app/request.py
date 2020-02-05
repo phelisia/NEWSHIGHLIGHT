@@ -55,7 +55,7 @@ def get_articles(source):
     '''
     Function that gets the json response to our url request
     '''
-    # get_articles_url = article_base_url.format(source, api_key)
+    get_articles_url = article_base_url.format(source, api_key)
 
     with urllib.request.urlopen(get_articles_url) as url:
         get_articles_data = url.read()
