@@ -13,7 +13,7 @@ Python
 Run python3 run.py
 
 # Live links
-https://phelisia.github.io/Quotes/
+https://phelisia.github.io/NEWSHIGHLIGHT/.
 
 # License
 Licensed under the MIT license. copyright (c) 2020 NewsHighlights
