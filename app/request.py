@@ -7,8 +7,7 @@ Articles =news.Articles
 api_key = app.config['NEWS_API_KEY']
 # Getting the news base url
 base_url = app.config["NEWS_API_BASE_URL"]
-# article_base_url = app.config["ARTICLES_API_BASE_URL"]
-
+ article_base_url = app.config["ARTICLES_API_BASE_URL"]
 def get_news():
     '''
     Function that gets the json response to our url request
@@ -56,7 +55,7 @@ def get_articles(source):
     '''
     Function that gets the json response to our url request
     '''
-    get_articles_url = article_base_url.format(source, api_key)
+    # get_articles_url = article_base_url.format(source, api_key)
 
     with urllib.request.urlopen(get_articles_url) as url:
         get_articles_data = url.read()
