@@ -1,0 +1,11 @@
+{% macro displayNewsList(news_list) %}
+<ul>
+    {% for source in news_list %}
+
+    <li>{{source.name}}</li>
+    <a class="btn btn-primary"  href="/news/{{source.source_id}}">{{source.source_id}}</a> 
+     
+    {% endfor %}
+    {% endmacro%}
+</ul>
+

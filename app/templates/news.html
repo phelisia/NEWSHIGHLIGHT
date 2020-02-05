@@ -1,1 +1,35 @@
-<h1> News Highlight {{ id }} </h1>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        {% if title %}
+        <title> {{ title }}</title>
+        {% else %}
+        <title> News  Highlights</title>
+        {% endif %}
+    </head>
+    <body>
+        <body>
+            <!-- Navbar block  -->
+            {% block navbar %}
+            {% include 'navbar.html' %}
+            {% endblock %}
+            <hr>
+            <div class="container mt-5">
+                        {%for new,des,i,url,publAt in context %}
+                <div class="card m-3 p-3 shadow">
+                    <img src="{{i}}" class="img-fluid myimages">
+                    <h3>News:</h3> {{new}}
+                    <h4>Description:</h4> {{des}}
+                    <h4>Publish At:</h4>"{{publAt}}"
+                    <div class="text-center">
+                            <a href="{{url}}" type="button" class="btn btn-outline-primary" target="_blank">Read More</a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            
+            
+            </body>
+    </body>
+</html>
