@@ -59,7 +59,7 @@ def get_articles(source):
 
     with urllib.request.urlopen(get_articles_url) as url:
         get_articles_data = url.read()
-        get_articles_response = json.loads(get_articles_data)
+        # get_articles_response = json.loads(get_articles_data)
 
         articles_results = None
 
@@ -85,7 +85,7 @@ def process_articles(articles_results_list):
         description = articles_item.get('description')
         title = articles_item.get('title')
         image= articles_item.get('url')
-        # urlToImage= articles_item.get('urlToImage')
+        urlToImage= articles_item.get('urlToImage')
         publishedAt=articles_item.get('publishedAt')
         content = articles_item.get('content')
         
