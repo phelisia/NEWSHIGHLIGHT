@@ -16,14 +16,14 @@
             {% endblock %}
             <hr>
             <div class="container mt-5">
-                        {%for new,des,i,url,publAt in context %}
+                {%for articles in source_articles %}
                 <div class="card m-3 p-3 shadow">
-                    <img src="{{i}}" class="img-fluid myimages">
-                    <h3>News:</h3> {{new}}
-                    <h4>Description:</h4> {{des}}
-                    <h4>Publish At:</h4>"{{publAt}}"
+                    <img src="{{articles.urlToImage}}" class="img-fluid myimages">
+                    <h3>News: {{articles.new}}</h3>
+                    <h4>Description: {{articles.description}}</h4> 
+                    <h4>Publish At: {{articles.publishedAt}}</h4>
                     <div class="text-center">
-                            <a href="{{url}}" type="button" class="btn btn-outline-primary" target="_blank">Read More</a>
+                            <a href="{{articles.url}}" type="button" class="btn btn-outline-primary" target="_blank">Read More</a>
                     </div>
                 </div>
                 {% endfor %}
