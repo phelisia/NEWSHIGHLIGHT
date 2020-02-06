@@ -1,24 +1,14 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        {% if title %}
-        <title> {{ title }}</title>
-        {% else %}
-        <title class="news"> News  Highlights</title>
-        {% endif %}
-    </head>
-    <body>
-        <body>
-            <!-- Navbar block  -->
-            {% block navbar %}
-            {% include 'navbar.html' %}
-            {% endblock %}
-            <hr>
-            <div class="container mt-5">
-                {%for articles in source_articles %}
+{% extends 'base.html'%}
+    <!-- Navbar block  -->
+    {% block navbar %}
+        {% include 'navbar.html' %}
+    {% endblock %}
+    <hr>
+    {% block content %}
+        <div class="container mt-5">
+            {%for articles in source_articles %}
                 <div class="card m-3 p-3 shadow">
-                    <img src="{{articles.urlToImage}}" class="img-fluid myimages">
+                    <img src="{{articles.urlToImage}}" class="img-fluid myimages" alt = "{{articles.title}}">
                     <h3>News: {{articles.new}}</h3>
                     <h4>Description: {{articles.description}}</h4> 
                     <h4>Publish At: {{articles.publishedAt}}</h4>
@@ -26,10 +16,7 @@
                             <a href="{{articles.url}}" type="button" class="btn btn-outline-primary" target="_blank">Read More</a>
                     </div>
                 </div>
-                {% endfor %}
-            </div>
+            {% endfor %}
+        </div>
+    {%endblock%}
             
-            
-            </body>
-    </body>
-</html>

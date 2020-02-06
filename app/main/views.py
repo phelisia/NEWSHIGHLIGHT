@@ -1,8 +1,10 @@
 from flask import render_template
-from app import app
-from .request import get_news, get_articles
+from . import main
+from ..models import News, Articles
+from ..request import get_news, get_articles
+
 # Views
-@app.route('/')
+@main.route('/')
 def index():
 
     '''
@@ -11,10 +13,10 @@ def index():
 
     # Getting popular movie
     news = get_news()
-    title = 'Home - News highlight'
+    title = 'News highlight'
     return render_template('index.html', title = title, sources = news )
 
-@app.route('/news/<news_id>')
+@main.route('/news/<news_id>')
 def news(news_id):
 
     '''
